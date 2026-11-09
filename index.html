@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="id" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DexxDigital - Agensi Digital & Portofolio Modern</title>
+    <meta name="description" content="Website portofolio digital agency DexxDigital dengan arsitektur modern, performa tinggi, dan panel CMS tersembunyi terintegrasi database Firebase." />
+    <meta property="og:title" content="DexxDigital - Agensi Digital & Portofolio Modern" />
+    <meta property="og:description" content="Website portofolio digital agency DexxDigital dengan arsitektur modern, performa tinggi, dan panel CMS tersembunyi terintegrasi database Firebase." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Application CSS -->
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-[#08090C] text-slate-100 antialiased selection:bg-cyan-500/30 selection:text-cyan-200 min-h-screen flex flex-col">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-[#08090C]/90 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/40 py-3.5 transition-all">
+      <div class="max-w-7xl mx-auto px-6 flex items-center justify-between gap-8">
+        <!-- Zone 1: Logo & Brand -->
+        <a href="#home" id="nav-brand" class="whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded">
+          <!-- Diinjeksi dinamis oleh JavaScript -->
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+          <a href="#home" class="hover:text-cyan-400 transition-colors whitespace-nowrap">Beranda</a>
+          <a href="#portfolio" class="hover:text-cyan-400 transition-colors whitespace-nowrap">Portofolio</a>
+          <a href="#services" id="nav-services-link" class="hover:text-cyan-400 transition-colors whitespace-nowrap">Layanan</a>
+          <a href="#about" class="hover:text-cyan-400 transition-colors whitespace-nowrap">Tentang Kami</a>
+          <a href="#contact" class="hover:text-cyan-400 transition-colors whitespace-nowrap">Kontak</a>
+        </nav>
+
+        <!-- Zone 3: Primary Action Button -->
+        <div class="hidden md:flex items-center gap-4 shrink-0">
+          <a href="#contact" class="inline-flex items-center gap-2 px-4.5 py-2 text-xs font-semibold uppercase tracking-wider text-black bg-cyan-400 rounded-lg hover:bg-cyan-300 transition-all shadow-sm shadow-cyan-500/20 active:scale-95 whitespace-nowrap">
+            <span>Mulai Proyek</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3.5 h-3.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="flex items-center md:hidden">
+          <button type="button" id="mobile-menu-toggle" aria-label="Buka Menu Navigasi" class="p-2 text-slate-300 hover:text-white rounded-lg focus:outline-none">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-drawer" class="hidden md:hidden bg-[#0A0C12] border-b border-white/10 px-6 py-6 space-y-4">
+        <nav class="flex flex-col space-y-3 text-base font-medium text-slate-200">
+          <a href="#home" class="py-2 hover:text-cyan-400 transition-colors">Beranda</a>
+          <a href="#portfolio" class="py-2 hover:text-cyan-400 transition-colors">Portofolio</a>
+          <a href="#services" id="mobile-services-link" class="py-2 hover:text-cyan-400 transition-colors">Layanan</a>
+          <a href="#about" class="py-2 hover:text-cyan-400 transition-colors">Tentang Kami</a>
+          <a href="#contact" class="py-2 hover:text-cyan-400 transition-colors">Kontak</a>
+        </nav>
+        <div class="pt-3 border-t border-white/10">
+          <a href="#contact" class="w-full flex items-center justify-center gap-2 py-3 text-xs font-semibold uppercase tracking-wider text-black bg-cyan-400 rounded-lg hover:bg-cyan-300 transition-all">
+            <span>Mulai Proyek</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="flex-grow">
+      
+      <!-- HERO SECTION -->
+      <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <!-- Ambient Background Lights -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[450px] bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none -z-10" aria-hidden="true"></div>
+        <div class="absolute top-1/3 right-10 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[130px] pointer-events-none -z-10" aria-hidden="true"></div>
+
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            
+            <!-- Left Headline & Copy -->
+            <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+              <!-- Kicker (TANPA LOGO GEMINI/BINTANG!) -->
+              <div id="hero-kicker-container" class="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-cyan-400">
+                <!-- Diinjeksi dinamis -->
+              </div>
+
+              <h1 id="hero-headline" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.08] text-balance">
+                <!-- Diinjeksi dinamis -->
+              </h1>
+
+              <p id="hero-subheadline" class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+                <!-- Diinjeksi dinamis -->
+              </p>
+
+              <!-- Hero Actions -->
+              <div class="pt-2 flex flex-wrap items-center gap-4">
+                <a href="#portfolio" id="hero-cta-primary" class="inline-flex items-center gap-2.5 px-6 py-3 text-sm font-semibold text-black bg-cyan-400 rounded-lg hover:bg-cyan-300 transition-all shadow-md shadow-cyan-500/20 active:scale-95 cursor-pointer whitespace-nowrap">
+                  <span>Jelajahi Portofolio</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+                <a href="#contact" id="hero-cta-secondary" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-white/5 hover:bg-white/10 border border-white/15 rounded-lg transition-all active:scale-95 cursor-pointer whitespace-nowrap">
+                  <span>Konsultasi Proyek</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4 text-slate-400"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Visual Studio Frame -->
+            <div class="lg:col-span-5 relative">
+              <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-[#0E1118] shadow-2xl shadow-black/80 group">
+                <img
+                  id="hero-image"
+                  src="/src/assets/images/hero_digital_agency_1794229794726.jpg"
+                  alt="DexxDigital Studio Engineering"
+                  class="w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs">
+                  <span class="text-slate-300 font-medium">Rekayasa Produk Digital</span>
+                  <span id="hero-badge-text" class="text-cyan-400 font-mono">Q1 2026 Ready</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4-Column Proof & KPI Strip -->
+          <div class="mt-16 pt-12 border-t border-white/10">
+            <div id="stats-container" class="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <!-- Diinjeksi dinamis -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO SECTION -->
+      <section id="portfolio" class="py-24 border-t border-white/10 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-cyan-400">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                <span>Portofolio Pilihan</span>
+                <span aria-hidden="true" class="text-slate-600">·</span>
+                <span class="text-slate-400">Arsip Karya Terpilih</span>
+              </div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                Dikerjakan Dengan Presisi Tinggi.
+              </h2>
+            </div>
+            <p class="text-slate-400 text-sm max-w-md">
+              Koleksi arsitektur web modern, platform SaaS misi-kritis, dan identitas visual korporat yang berdampak nyata.
+            </p>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar" id="portfolio-filters">
+            <!-- Diinjeksi dinamis -->
+          </div>
+
+          <!-- Projects Grid -->
+          <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Diinjeksi dinamis -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION (OPSIONAL & DAPAT DIEDIT/DIHAPUS BEBAS) -->
+      <section id="services" class="py-24 border-t border-white/10 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          <div id="services-header-container" class="max-w-2xl mb-16 space-y-3">
+            <div id="services-kicker-container" class="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-cyan-400">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span id="services-kicker">Kapabilitas Digital · End-to-End Solutions</span>
+            </div>
+            <h2 id="services-headline" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+              Solusi Komprehensif Siap Skala Besar.
+            </h2>
+            <p id="services-subheadline" class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Kami bertindak sebagai perpanjangan dari tim produk Anda—mengubah tantangan teknis kompleks menjadi pengalaman digital berkonversi tinggi.
+            </p>
+          </div>
+
+          <!-- Services Grid -->
+          <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Diinjeksi dinamis -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="py-24 border-t border-white/10 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          <!-- Story Narrative -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
+            <div class="lg:col-span-5 space-y-4">
+              <div class="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-cyan-400">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                <span>Filosofi Studio</span>
+                <span aria-hidden="true" class="text-slate-600">·</span>
+                <span class="text-slate-400">Tentang DexxDigital</span>
+              </div>
+              <h2 id="about-headline" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight text-balance">
+                <!-- Diinjeksi dinamis -->
+              </h2>
+            </div>
+            <div class="lg:col-span-7 space-y-6 text-slate-300 text-sm sm:text-base leading-relaxed">
+              <p id="about-story"><!-- Diinjeksi dinamis --></p>
+              <p id="about-statement" class="text-slate-400 border-l border-cyan-400/40 pl-4 py-1 italic"><!-- Diinjeksi dinamis --></p>
+            </div>
+          </div>
+
+          <!-- Pillars -->
+          <div id="pillars-container" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            <!-- Diinjeksi dinamis -->
+          </div>
+
+          <!-- Testimonials -->
+          <div class="space-y-8">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              <div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-cyan-400">Testimoni Klien</span>
+                <h3 class="text-2xl font-bold text-white mt-1">Dipercaya Pemimpin & Inovator Industri.</h3>
+              </div>
+              <span class="text-xs text-slate-500 font-mono">Ulasan Terverifikasi</span>
+            </div>
+            <div id="testimonials-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <!-- Diinjeksi dinamis -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="py-24 border-t border-white/10 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="max-w-2xl mb-16 space-y-3">
+            <div class="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-cyan-400">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span>Mulai Kolaborasi</span>
+              <span aria-hidden="true" class="text-slate-600">·</span>
+              <span class="text-slate-400">Intake Proyek Aktif</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+              Mari Bangun Sesuatu yang Luar Biasa.
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Punya ide proyek, membutuhkan desain ulang skala penuh, atau mencari partner teknis jangka panjang? Sampaikan kebutuhan Anda dan kami akan merespons dalam waktu 24 jam.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Left Contact Channels (Opsional, dapat disembunyikan / diedit / dihapus) -->
+            <div id="contact-channels-container" class="lg:col-span-5 space-y-8">
+              <div id="contact-channels-card" class="p-8 bg-[#0D1017] rounded-2xl border border-white/10 space-y-6">
+                <h3 id="contact-channels-title" class="text-lg font-bold text-white tracking-tight">Kanal Komunikasi Langsung</h3>
+                
+                <div class="space-y-5 text-sm">
+                  <!-- Email -->
+                  <div id="contact-email-item">
+                    <a id="contact-email-link" href="mailto:halo@dexxdigital.agency" class="flex items-start gap-3.5 text-slate-300 hover:text-cyan-400 transition-colors group">
+                      <div class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4 text-cyan-400"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                      </div>
+                      <div>
+                        <div class="text-xs text-slate-500 font-mono">Email Resmi</div>
+                        <div id="contact-email" class="font-medium text-white group-hover:text-cyan-300">halo@dexxdigital.agency</div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- WhatsApp -->
+                  <div id="contact-phone-item">
+                    <a id="contact-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3.5 text-slate-300 hover:text-emerald-400 transition-colors group">
+                      <div class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4 text-emerald-400"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                      </div>
+                      <div>
+                        <div class="text-xs text-slate-500 font-mono">WhatsApp Langsung</div>
+                        <div id="contact-phone" class="font-medium text-white group-hover:text-emerald-300">+62 812-8900-3344 (Chat Aktif)</div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Address -->
+                  <div id="contact-address-item" class="flex items-start gap-3.5 text-slate-300">
+                    <div class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4 text-cyan-400"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div>
+                      <div class="text-xs text-slate-500 font-mono">Lokasi Studio</div>
+                      <div id="contact-address" class="font-medium text-white">SCBD District 8, Lantai 29, Jakarta & Singapore Hub</div>
+                    </div>
+                  </div>
+
+                  <!-- Hours -->
+                  <div id="contact-hours-item" class="flex items-start gap-3.5 text-slate-300">
+                    <div class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4 text-cyan-400"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div>
+                      <div class="text-xs text-slate-500 font-mono">Jam Operasional</div>
+                      <div id="contact-hours" class="font-medium text-white">Senin – Jumat: 09:00 – 18:00 WIB</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="contact-wa-direct-container" class="pt-4 border-t border-white/10">
+                  <a id="contact-wa-direct" href="#" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 text-xs font-semibold uppercase tracking-wider text-black bg-emerald-400 hover:bg-emerald-300 rounded-lg transition-colors shadow-sm shadow-emerald-500/20">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    <span>Chat via WhatsApp Langsung</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Inquiry Form -->
+            <div id="contact-form-column" class="lg:col-span-7">
+              <div class="p-8 sm:p-10 bg-[#0D1017] rounded-2xl border border-white/10 relative">
+                
+                <!-- Success Notification -->
+                <div id="contact-success-container" class="hidden py-12 text-center space-y-4">
+                  <div class="w-14 h-14 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center mx-auto">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-8 h-8"><path d="M20 6L9 17l-5-5"/></svg>
+                  </div>
+                  <h3 class="text-2xl font-bold text-white">Konsultasi Diterima</h3>
+                  <p class="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
+                    Terima kasih, <span id="success-client-name" class="text-cyan-400 font-semibold"></span>. Tim kami akan meninjau pesan Anda dan segera menghubungi melalui <span id="success-client-email" class="text-cyan-400 font-mono"></span> dalam 24 jam.
+                  </p>
+                  <div class="pt-4">
+                    <button type="button" id="btn-new-inquiry" class="px-5 py-2.5 text-xs font-semibold text-black bg-cyan-400 hover:bg-cyan-300 rounded-lg transition-colors cursor-pointer">
+                      Kirim Pesan Lain
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Form -->
+                <div id="contact-form-container">
+                  <form id="public-contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      <div class="space-y-2">
+                        <label for="inquiry-name" class="block text-xs font-medium text-slate-300">
+                          Nama Anda / Perusahaan <span class="text-cyan-400">*</span>
+                        </label>
+                        <input id="inquiry-name" type="text" placeholder="Contoh: Budi Santoso" required class="w-full px-4 py-3 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-cyan-400" />
+                      </div>
+                      <div class="space-y-2">
+                        <label for="inquiry-email" class="block text-xs font-medium text-slate-300">
+                          Alamat Email Bisnis <span class="text-cyan-400">*</span>
+                        </label>
+                        <input id="inquiry-email" type="email" placeholder="budi@perusahaan.com" required class="w-full px-4 py-3 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-cyan-400" />
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      <div class="space-y-2">
+                        <label for="inquiry-service" class="block text-xs font-medium text-slate-300">
+                          Pilihan Layanan Utama
+                        </label>
+                        <select id="inquiry-service" class="w-full px-4 py-3 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-cyan-400">
+                          <option value="Pengembangan Web & SaaS Full-Stack">Pengembangan Web & SaaS Full-Stack</option>
+                          <option value="Desain UI/UX & Interaksi Produk">Desain UI/UX & Interaksi Produk</option>
+                          <option value="Aplikasi Mobile iOS & Android">Aplikasi Mobile iOS & Android</option>
+                          <option value="Integrasi AI & Otomasi Sistem">Integrasi AI & Otomasi Sistem</option>
+                          <option value="Identitas Brand & Visual Direction">Identitas Brand & Visual Direction</option>
+                          <option value="Infrastruktur Cloud & Skalabilitas">Infrastruktur Cloud & Skalabilitas</option>
+                        </select>
+                      </div>
+
+                      <div class="space-y-2">
+                        <label for="inquiry-budget" class="block text-xs font-medium text-slate-300">
+                          Estimasi Anggaran
+                        </label>
+                        <select id="inquiry-budget" class="w-full px-4 py-3 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-cyan-400">
+                          <option value="Rp 25 Juta – Rp 50 Juta">Rp 25 Juta – Rp 50 Juta (MVP / Fase 1)</option>
+                          <option value="Rp 50 Juta – Rp 150 Juta">Rp 50 Juta – Rp 150 Juta (Standar Enterprise)</option>
+                          <option value="Rp 150 Juta+">Rp 150 Juta+ (Transformasi Skala Penuh)</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="space-y-2">
+                      <label for="inquiry-message" class="block text-xs font-medium text-slate-300">
+                        Deskripsi Kebutuhan Proyek <span class="text-cyan-400">*</span>
+                      </label>
+                      <textarea id="inquiry-message" rows="4" placeholder="Ceritakan tujuan produk Anda, target waktu, atau kebutuhan fitur utama..." required class="w-full px-4 py-3 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-cyan-400 resize-y"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-black bg-cyan-400 hover:bg-cyan-300 rounded-lg transition-all shadow-md shadow-cyan-500/20 active:scale-95 cursor-pointer">
+                      <span>Kirim Formulir Konsultasi</span>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3.5 h-3.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="border-t border-white/10 bg-[#07080B] text-slate-400 py-16 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-12 border-b border-white/5">
+          <div class="space-y-2">
+            <div id="footer-brand-name" class="font-bold text-white text-lg">DexxDigital</div>
+            <p class="text-xs text-slate-400 max-w-sm">
+              Studio rekayasa produk digital independen. Merancang SaaS generasi baru, sistem web berkinerja tinggi, dan identitas digital berkelas.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-6 text-xs font-medium text-slate-400">
+            <a href="#home" class="hover:text-white transition-colors">Beranda</a>
+            <a href="#portfolio" class="hover:text-white transition-colors">Portofolio</a>
+            <a href="#services" id="footer-services-link" class="hover:text-white transition-colors">Layanan</a>
+            <a href="#about" class="hover:text-white transition-colors">Tentang Kami</a>
+            <a href="#contact" class="hover:text-white transition-colors">Kontak</a>
+          </div>
+
+          <a href="#home" aria-label="Kembali ke atas" class="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+          <div class="flex items-center gap-2">
+            <!-- SECRET TRIGGER: Klik 3x berturut-turut pada tombol copyright -->
+            <button
+              type="button"
+              id="secret-admin-trigger"
+              title="Akses Panel Admin (Klik 3x atau Ctrl+Shift+A)"
+              class="p-1 rounded text-slate-400 hover:text-slate-300 transition-colors cursor-pointer relative"
+            >
+              <span class="font-mono select-none">©</span>
+              <span id="secret-click-count" class="hidden absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-mono text-cyan-400 bg-black/90 px-1 rounded border border-cyan-500/30"></span>
+            </button>
+            <span id="footer-copy-text">2026 DexxDigital. Hak cipta dilindungi undang-undang.</span>
+          </div>
+
+          <div class="flex items-center gap-4 text-slate-400 font-mono text-[11px]">
+            <span>Obsidian Standard</span>
+            <span aria-hidden="true">·</span>
+            <span>Firebase Synced</span>
+            <span aria-hidden="true">·</span>
+            <span class="text-slate-500 cursor-pointer" onclick="document.getElementById('secret-admin-trigger').click()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3.5 h-3.5 inline hover:text-cyan-400"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= MODAL DETAIL PROYEK ================= -->
+    <div id="project-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-md">
+      <div class="relative w-full max-w-4xl bg-[#0C0F17] border border-white/10 rounded-2xl shadow-2xl shadow-cyan-500/10 overflow-hidden my-8">
+        <button type="button" id="btn-close-modal" aria-label="Tutup modal" class="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-black/60 text-slate-300 hover:text-white hover:bg-black/90 border border-white/10 transition-colors cursor-pointer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+
+        <div class="relative w-full aspect-[16/9] max-h-[380px] bg-slate-900 overflow-hidden">
+          <img id="modal-image" src="" alt="Detail Proyek" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0C0F17] via-transparent to-black/30 pointer-events-none"></div>
+          <div id="modal-metric" class="absolute bottom-4 left-6 px-3 py-1.5 rounded-lg bg-black/75 backdrop-blur-md border border-cyan-500/30 text-xs font-mono text-cyan-300 flex items-center gap-1.5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3.5 h-3.5 text-cyan-400"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-8 space-y-8 max-h-[calc(85vh-380px)] overflow-y-auto">
+          <div class="space-y-3">
+            <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400 font-medium">
+              <span id="modal-category" class="text-cyan-400 font-semibold"></span>
+              <span aria-hidden="true">·</span>
+              <span id="modal-client"></span>
+              <span aria-hidden="true">·</span>
+              <span id="modal-year" class="font-mono"></span>
+            </div>
+            <h2 id="modal-title" class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight"></h2>
+            <p id="modal-summary" class="text-base text-slate-300 leading-relaxed"></p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-white/10">
+            <div class="space-y-2">
+              <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Tantangan Arsitektur</h3>
+              <p id="modal-challenge" class="text-sm text-slate-300 leading-relaxed"></p>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-xs font-semibold uppercase tracking-wider text-cyan-400">Solusi Rekayasa DexxDigital</h3>
+              <p id="modal-solution" class="text-sm text-slate-300 leading-relaxed"></p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-white/10">
+            <div class="space-y-2">
+              <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Deliverables Utama</h3>
+              <ul id="modal-deliverables" class="text-sm text-slate-300 space-y-1"></ul>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Teknologi Digunakan</h3>
+              <div id="modal-technologies" class="flex flex-wrap gap-2 pt-1"></div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+            <div class="text-xs text-slate-500 font-mono">Dexx Verified Flagship Project</div>
+            <a id="modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-black bg-cyan-400 hover:bg-cyan-300 rounded-lg transition-colors">
+              <span>Buka Demo Platform</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3.5 h-3.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= MODAL PIN ADMIN RAHASIA ================= -->
+    <div id="pin-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+      <div class="relative w-full max-w-sm bg-[#0C0F17] border border-white/10 rounded-2xl shadow-2xl shadow-cyan-500/10 p-6 sm:p-8 space-y-6">
+        <button type="button" id="btn-close-pin" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-white rounded-lg transition-colors cursor-pointer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+
+        <div class="flex flex-col items-center text-center space-y-2">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white tracking-tight">Akses Panel Admin DexxCore</h3>
+          <p class="text-xs text-slate-400">Masukkan kode PIN untuk membuka panel CMS tersembunyi.</p>
+        </div>
+
+        <form id="pin-form" class="space-y-4">
+          <div class="space-y-2">
+            <input
+              type="password"
+              id="pin-input"
+              maxlength="10"
+              placeholder="PIN Admin"
+              class="w-full px-4 py-3 bg-[#08090C] border border-white/10 rounded-lg text-center font-mono tracking-widest text-lg text-white focus:outline-none focus:border-cyan-400"
+            />
+            <div id="pin-error" class="hidden text-center text-xs text-rose-400">
+              PIN salah. Silakan coba lagi.
+            </div>
+          </div>
+          <button type="submit" class="w-full py-3 text-xs font-bold uppercase tracking-wider text-black bg-cyan-400 hover:bg-cyan-300 rounded-lg transition-all shadow-md shadow-cyan-500/20 cursor-pointer">
+            Buka Panel CMS
+          </button>
+        </form>
+
+        <div class="pt-2 border-t border-white/5 text-center">
+          <span class="text-[11px] text-slate-500 font-mono">
+            Default PIN: <span class="text-cyan-400 font-semibold">2026</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= DASHBOARD ADMIN CMS LENGKAP ================= -->
+    <div id="admin-dashboard" class="hidden fixed inset-0 z-50 items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md">
+      <div class="relative w-full max-w-5xl h-[90vh] bg-[#0A0D14] border border-white/10 rounded-2xl shadow-2xl shadow-cyan-500/10 flex flex-col overflow-hidden">
+        
+        <!-- Header Panel Admin -->
+        <div class="px-6 py-4 border-b border-white/10 flex items-center justify-between bg-[#08090C] shrink-0">
+          <div class="flex items-center gap-3">
+            <div class="w-2.5 h-2.5 rounded-full bg-cyan-400"></div>
+            <h2 class="text-base font-bold text-white tracking-tight">DexxDigital CMS Panel</h2>
+            <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">Firebase Firestore Real-Time</span>
+          </div>
+          <button type="button" id="btn-close-admin" class="p-1.5 text-slate-400 hover:text-white rounded-lg transition-colors cursor-pointer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <!-- Toast Notification Banner -->
+        <div id="admin-toast" class="hidden px-6 py-2.5 text-xs font-medium shrink-0"></div>
+
+        <!-- Body: Left Tabs + Right Content -->
+        <div class="flex flex-col sm:flex-row flex-1 overflow-hidden">
+          
+          <!-- Tab Navigation -->
+          <div class="w-full sm:w-56 bg-[#080A0F] border-b sm:border-b-0 sm:border-r border-white/10 p-2 sm:p-4 flex sm:flex-col gap-1.5 shrink-0 overflow-x-auto sm:overflow-y-auto no-scrollbar">
+            <button type="button" data-tab="logo" class="admin-tab-btn flex items-center gap-2.5 px-3 py-2 sm:py-2.5 text-xs font-semibold rounded-lg text-left transition-colors cursor-pointer bg-cyan-400 text-black whitespace-nowrap shrink-0 sm:w-full">
+              <span>Manajer Logo</span>
+            </button>
+            <button type="button" data-tab="content" class="admin-tab-btn flex items-center gap-2.5 px-3 py-2 sm:py-2.5 text-xs font-medium rounded-lg text-left transition-colors cursor-pointer text-slate-400 hover:text-white hover:bg-white/5 whitespace-nowrap shrink-0 sm:w-full">
+              <span>Konten & Hero</span>
+            </button>
+            <button type="button" data-tab="portfolio" class="admin-tab-btn flex items-center gap-2.5 px-3 py-2 sm:py-2.5 text-xs font-medium rounded-lg text-left transition-colors cursor-pointer text-slate-400 hover:text-white hover:bg-white/5 whitespace-nowrap shrink-0 sm:w-full">
+              <span>Portofolio</span>
+            </button>
+            <button type="button" data-tab="services" class="admin-tab-btn flex items-center gap-2.5 px-3 py-2 sm:py-2.5 text-xs font-medium rounded-lg text-left transition-colors cursor-pointer text-slate-400 hover:text-white hover:bg-white/5 whitespace-nowrap shrink-0 sm:w-full">
+              <span>Layanan</span>
+            </button>
+            <button type="button" data-tab="settings" class="admin-tab-btn flex items-center gap-2.5 px-3 py-2 sm:py-2.5 text-xs font-medium rounded-lg text-left transition-colors cursor-pointer text-slate-400 hover:text-white hover:bg-white/5 whitespace-nowrap shrink-0 sm:w-full">
+              <span>Firebase & Pengaturan</span>
+            </button>
+          </div>
+
+          <!-- Tab Content Panes -->
+          <div class="flex-1 p-6 sm:p-8 overflow-y-auto space-y-6">
+            
+            <!-- TAB 1: LOGO MANAGER -->
+            <div id="tab-content-logo" class="admin-tab-content space-y-6">
+              <div>
+                <h3 class="text-lg font-bold text-white">Manajer Logo Dinamis</h3>
+                <p class="text-xs text-slate-400 mt-1">
+                  Upload file logo lokal dari perangkat Anda menggunakan file gambar (<code class="font-mono text-cyan-400">&lt;input type="file"&gt;</code>). Logo akan langsung berubah secara real-time dan disimpan ke database Firebase.
+                </p>
+              </div>
+
+              <div class="p-6 bg-[#08090C] rounded-xl border border-white/10 space-y-3">
+                <span class="text-xs font-mono uppercase text-slate-400">Pratinjau Logo Aktif</span>
+                <div id="admin-logo-preview" class="p-4 bg-[#0A0D14] rounded-lg border border-white/5 flex items-center justify-between"></div>
+              </div>
+
+              <div class="p-6 bg-[#0D1017] rounded-xl border border-dashed border-cyan-500/30 space-y-4 text-center">
+                <h4 class="text-sm font-bold text-white">Pilih File Logo Baru</h4>
+                <p class="text-xs text-slate-400">Mendukung format PNG, JPG, SVG, WebP transparan.</p>
+                <input type="file" id="admin-logo-file" accept="image/*" class="text-xs text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-cyan-400 file:text-black hover:file:bg-cyan-300 cursor-pointer" />
+                <div class="pt-2">
+                  <button type="button" id="btn-reset-logo" class="px-4 py-2 text-xs text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-colors cursor-pointer">
+                    Kembalikan ke Monogram Bawaan
+                  </button>
+                </div>
+              </div>
+
+              <div class="space-y-3 pt-4 border-t border-white/10">
+                <label for="admin-brand-name" class="block text-xs font-medium text-slate-300">Teks Nama Brand Agensi</label>
+                <input type="text" id="admin-brand-name" class="w-full px-4 py-2.5 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-cyan-400" />
+              </div>
+            </div>
+
+            <!-- TAB 2: CONTENT & HERO -->
+            <div id="tab-content-content" class="admin-tab-content hidden space-y-6">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-lg font-bold text-white">Editor Konten & Teks</h3>
+                  <p class="text-xs text-slate-400 mt-1">Seluruh teks pada website bersifat opsional dan dapat diedit atau dihapus kapan saja.</p>
+                </div>
+                <button type="button" id="admin-save-content" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-black bg-cyan-400 hover:bg-cyan-300 rounded-lg transition-colors cursor-pointer">
+                  Simpan Semua Perubahan
+                </button>
+              </div>
+
+              <!-- Hero -->
+              <div class="p-6 bg-[#0D1017] rounded-xl border border-white/10 space-y-4">
+                <span class="text-xs font-mono uppercase text-cyan-400">Bagian Hero</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="space-y-1">
+                    <label class="block text-xs text-slate-400">Kicker Badge (Kosongkan jika ingin disembunyikan)</label>
+                    <input type="text" id="admin-hero-kicker" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white" placeholder="Contoh: Studio Rekayasa Produk Digital" />
+                  </div>
+                  <div class="space-y-1">
+                    <label class="block text-xs text-slate-400">Ikon Kicker (Bebas Ikon Gemini/Bintang)</label>
+                    <select id="admin-hero-kicker-icon" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white">
+                      <option value="none">Hilangkan Ikon (Hanya Teks Bersih)</option>
+                      <option value="dot">Titik Status Cyan Minimalis</option>
+                      <option value="pulse">Lampu Status Hijau Berdenyut (Live Beacon)</option>
+                      <option value="slash">Garis Slash Modern (//)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label class="block text-xs text-slate-400">Judul Utama Hero (Headline)</label>
+                  <textarea id="admin-hero-headline" rows="2" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white resize-y"></textarea>
+                </div>
+                <div class="space-y-2">
+                  <label class="block text-xs text-slate-400">Subheadline (Deskripsi)</label>
+                  <textarea id="admin-hero-subheadline" rows="3" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white resize-y"></textarea>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Teks Tombol CTA 1</label>
+                    <input type="text" id="admin-hero-cta1" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" />
+                  </div>
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Teks Tombol CTA 2</label>
+                    <input type="text" id="admin-hero-cta2" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- About -->
+              <div class="p-6 bg-[#0D1017] rounded-xl border border-white/10 space-y-4">
+                <span class="text-xs font-mono uppercase text-cyan-400">Tentang Kami</span>
+                <div class="space-y-2">
+                  <label class="block text-xs text-slate-400">Judul Tentang Kami</label>
+                  <input type="text" id="admin-about-headline" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white" />
+                </div>
+                <div class="space-y-2">
+                  <label class="block text-xs text-slate-400">Cerita / Narasi Studio</label>
+                  <textarea id="admin-about-story" rows="3" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white resize-y"></textarea>
+                </div>
+                <div class="space-y-2">
+                  <label class="block text-xs text-slate-400">Pernyataan Prinsip (Opsional)</label>
+                  <input type="text" id="admin-about-statement" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white" />
+                </div>
+              </div>
+
+              <!-- Contact Channels Settings (OPSIONAL, EDIT/HAPUS BEBAS) -->
+              <div class="p-6 bg-[#0D1017] rounded-xl border border-white/10 space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-mono uppercase text-cyan-400">Pengaturan Kanal Komunikasi Langsung</span>
+                  <label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
+                    <input type="checkbox" id="admin-contact-show" class="rounded accent-cyan-400 cursor-pointer" checked />
+                    <span>Tampilkan Kartu Kanal Komunikasi</span>
+                  </label>
+                </div>
+                <p class="text-xs text-slate-400">Setiap kolom di bawah bersifat opsional. Kosongkan nilai kolom jika ingin menghapus atau menyembunyikannya dari tampilan website.</p>
+                
+                <div>
+                  <label class="block text-xs text-slate-400 mb-1">Judul Kartu Kanal</label>
+                  <input type="text" id="admin-contact-title" placeholder="Kanal Komunikasi Langsung" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Email Resmi (Kosongkan untuk menghapus)</label>
+                    <input type="email" id="admin-contact-email" placeholder="halo@dexxdigital.agency" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" />
+                  </div>
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Nomor WhatsApp / Telepon (Kosongkan untuk menghapus)</label>
+                    <input type="text" id="admin-contact-phone" placeholder="+62 812-8900-3344" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Lokasi Studio / Alamat (Kosongkan untuk menghapus)</label>
+                    <input type="text" id="admin-contact-address" placeholder="SCBD District 8, Jakarta" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" />
+                  </div>
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Jam Operasional (Kosongkan untuk menghapus)</label>
+                    <input type="text" id="admin-contact-hours" placeholder="Senin – Jumat: 09:00 – 18:00 WIB" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" />
+                  </div>
+                </div>
+
+                <div class="pt-2 flex items-center gap-2">
+                  <input type="checkbox" id="admin-contact-wa-btn-toggle" class="rounded accent-cyan-400 cursor-pointer" checked />
+                  <label for="admin-contact-wa-btn-toggle" class="text-xs text-slate-300 cursor-pointer">
+                    Tampilkan Tombol Cepat "Chat via WhatsApp Langsung"
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 3: PORTFOLIO MANAGER (UPLOAD DARI FILE & DYNAMIC CATEGORY) -->
+            <div id="tab-content-portfolio" class="admin-tab-content hidden space-y-6">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-lg font-bold text-white">Manajer Proyek Portofolio</h3>
+                  <p class="text-xs text-slate-400 mt-1">
+                    Upload foto proyek dari file galeri/komputer Anda. Kategori portofolio di website akan otomatis menyesuaikan hanya dengan proyek yang Anda isi.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Form Tambah / Edit Proyek -->
+              <form id="admin-add-project-form" class="p-6 bg-[#0D1017] rounded-xl border border-white/10 space-y-5">
+                <input type="hidden" id="edit-proj-id" value="" />
+                <div class="flex items-center justify-between">
+                  <span id="proj-form-heading" class="text-xs font-mono uppercase text-cyan-400">+ Tambah Proyek Portofolio Baru</span>
+                  <button type="button" id="btn-cancel-edit-proj" class="hidden text-xs text-slate-400 hover:text-white bg-white/5 px-2.5 py-1 rounded border border-white/10 cursor-pointer">
+                    Batal Edit
+                  </button>
+                </div>
+
+                <!-- Upload Foto Proyek Melalui File Lokal -->
+                <div class="p-4 bg-[#08090C] rounded-lg border border-dashed border-cyan-500/30 space-y-3">
+                  <label class="block text-xs font-semibold text-white">
+                    Pilih File Foto Proyek Dari Perangkat
+                  </label>
+                  <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                    <input
+                      type="file"
+                      id="new-proj-file"
+                      accept="image/*"
+                      class="text-xs text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-cyan-400 file:text-black hover:file:bg-cyan-300 cursor-pointer"
+                    />
+                    <div id="new-proj-preview-box" class="hidden items-center gap-3">
+                      <img id="new-proj-preview-img" src="" alt="Pratinjau" class="w-16 h-12 object-cover rounded border border-white/20" />
+                      <button type="button" id="btn-clear-proj-file" class="text-[11px] text-rose-400 hover:text-rose-300 cursor-pointer">
+                        Hapus Foto
+                      </button>
+                    </div>
+                  </div>
+                  <div class="text-[11px] text-slate-400">
+                    Atau gunakan URL gambar luar (opsional):
+                  </div>
+                  <input type="text" id="new-proj-img" class="w-full px-3 py-1.5 bg-[#0A0D14] border border-white/10 rounded text-xs text-white" placeholder="https://... atau biarkan kosong jika sudah memilih file di atas" />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Judul Proyek *</label>
+                    <input type="text" id="new-proj-title" required class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" placeholder="Contoh: Alpha Pay Fintech" />
+                  </div>
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Kategori Karya</label>
+                    <div class="space-y-2">
+                      <select id="new-proj-category" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white">
+                        <option value="Aplikasi Web">Aplikasi Web</option>
+                        <option value="Desain UI/UX">Desain UI/UX</option>
+                        <option value="Aplikasi Mobile">Aplikasi Mobile</option>
+                        <option value="Identitas Brand">Identitas Brand</option>
+                        <option value="Sistem AI">Sistem AI</option>
+                        <option value="__custom__">+ Kategori Kustom / Baru...</option>
+                      </select>
+                      <input type="text" id="new-proj-custom-category" placeholder="Ketik nama kategori baru..." class="hidden w-full px-3 py-1.5 bg-[#08090C] border border-cyan-500/40 rounded text-xs text-white" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Klien (Opsional)</label>
+                    <input type="text" id="new-proj-client" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" placeholder="Nama Klien" />
+                  </div>
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Tahun (Opsional)</label>
+                    <input type="text" id="new-proj-year" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white font-mono" value="2026" />
+                  </div>
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Metrik Hasil (Opsional)</label>
+                    <input type="text" id="new-proj-metric" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white font-mono" placeholder="+200% Performa" />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs text-slate-400 mb-1">Ringkasan Singkat (Opsional)</label>
+                  <textarea id="new-proj-summary" rows="2" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" placeholder="Deskripsi ringkas proyek..."></textarea>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Teknologi Digunakan (pisahkan dengan koma)</label>
+                    <input type="text" id="new-proj-tech" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white font-mono" placeholder="JavaScript, Tailwind CSS, API" />
+                  </div>
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Link Demo / Website Live (Opsional)</label>
+                    <input type="text" id="new-proj-link" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white font-mono" placeholder="https://..." />
+                  </div>
+                </div>
+
+                <button type="submit" id="btn-submit-project" class="px-5 py-2.5 text-xs font-semibold text-black bg-cyan-400 hover:bg-cyan-300 rounded-lg transition-colors cursor-pointer">
+                  Simpan Proyek
+                </button>
+              </form>
+
+              <!-- Tabel Proyek yang Ada -->
+              <div class="border border-white/10 rounded-xl overflow-hidden bg-[#0D1017]">
+                <table class="w-full text-left text-xs">
+                  <thead class="bg-[#08090C] text-slate-400 border-b border-white/10 font-mono">
+                    <tr>
+                      <th class="py-3 px-4">Proyek</th>
+                      <th class="py-3 px-4">Kategori</th>
+                      <th class="py-3 px-4">Klien</th>
+                      <th class="py-3 px-4">Tahun</th>
+                      <th class="py-3 px-4 text-right">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-projects-tbody" class="divide-y divide-white/5 text-slate-300">
+                    <!-- Diinjeksi dinamis -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- TAB 4: SERVICES MANAGER (OPSIONAL & DAPAT DIEDIT / DIHAPUS BEBAS) -->
+            <div id="tab-content-services" class="admin-tab-content hidden space-y-6">
+              <div>
+                <h3 class="text-lg font-bold text-white">Manajer Layanan ("Solusi Komprehensif Siap Skala Besar")</h3>
+                <p class="text-xs text-slate-400 mt-1">
+                  Bagian layanan ini sepenuhnya opsional. Anda dapat menyembunyikan seluruh bagian ini dari website atau bebas mengedit dan menghapus isinya.
+                </p>
+              </div>
+
+              <!-- Pengaturan Header Bagian Layanan -->
+              <div class="p-6 bg-[#0D1017] rounded-xl border border-white/10 space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-mono uppercase text-cyan-400">Pengaturan Tampilan Bagian Layanan</span>
+                  <label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
+                    <input type="checkbox" id="admin-services-show" class="rounded accent-cyan-400 cursor-pointer" checked />
+                    <span>Tampilkan Bagian Layanan di Website</span>
+                  </label>
+                </div>
+
+                <div class="space-y-3 pt-2">
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Kicker Layanan (Opsional)</label>
+                    <input type="text" id="admin-services-kicker" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" placeholder="Kapabilitas Digital · End-to-End Solutions" />
+                  </div>
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Judul Utama Layanan</label>
+                    <input type="text" id="admin-services-headline" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white font-semibold" placeholder="Solusi Komprehensif Siap Skala Besar." />
+                  </div>
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Subheadline / Deskripsi Layanan (Opsional)</label>
+                    <textarea id="admin-services-subheadline" rows="2" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white resize-y" placeholder="Penjelasan kapabilitas layanan studio..."></textarea>
+                  </div>
+                  <button type="button" id="btn-save-services-header" class="px-4 py-2 text-xs font-semibold text-black bg-cyan-400 hover:bg-cyan-300 rounded-lg transition-colors cursor-pointer">
+                    Simpan Pengaturan Judul Layanan
+                  </button>
+                </div>
+              </div>
+
+              <!-- Form Tambah / Edit Layanan Baru -->
+              <form id="admin-add-service-form" class="p-6 bg-[#0D1017] rounded-xl border border-white/10 space-y-4">
+                <input type="hidden" id="edit-srv-id" value="" />
+                <div class="flex items-center justify-between">
+                  <span id="srv-form-heading" class="text-xs font-mono uppercase text-cyan-400">+ Tambah Layanan Baru</span>
+                  <button type="button" id="btn-cancel-edit-srv" class="hidden text-xs text-slate-400 hover:text-white bg-white/5 px-2.5 py-1 rounded border border-white/10 cursor-pointer">
+                    Batal Edit
+                  </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                  <div class="sm:col-span-3">
+                    <label class="block text-xs text-slate-400 mb-1">Nama Layanan *</label>
+                    <input type="text" id="new-srv-title" required class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" placeholder="Contoh: Arsitektur Cloud & Keamanan" />
+                  </div>
+                  <div>
+                    <label class="block text-xs text-slate-400 mb-1">Nomor Urut</label>
+                    <input type="text" id="new-srv-number" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white font-mono" placeholder="01" />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs text-slate-400 mb-1">Deskripsi Layanan (Opsional)</label>
+                  <textarea id="new-srv-desc" rows="2" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" placeholder="Penjelasan kapabilitas layanan..."></textarea>
+                </div>
+
+                <div>
+                  <label class="block text-xs text-slate-400 mb-1">Fitur / Sub-layanan (pisahkan dengan koma)</label>
+                  <input type="text" id="new-srv-features" class="w-full px-3 py-2 bg-[#08090C] border border-white/10 rounded-lg text-xs text-white" placeholder="Arsitektur Cloud, WebSockets, Keamanan Zero-Trust" />
+                </div>
+
+                <button type="submit" id="btn-submit-service" class="px-5 py-2.5 text-xs font-semibold text-black bg-cyan-400 hover:bg-cyan-300 rounded-lg transition-colors cursor-pointer">
+                  Simpan Layanan
+                </button>
+              </form>
+
+              <!-- Daftar Layanan yang Ada -->
+              <div class="space-y-3">
+                <span class="text-xs font-mono uppercase text-slate-400">Daftar Layanan Aktif:</span>
+                <div id="admin-services-list" class="space-y-3">
+                  <!-- Diinjeksi dinamis -->
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 5: FIREBASE & SETTINGS -->
+            <div id="tab-content-settings" class="admin-tab-content hidden space-y-6">
+              <div>
+                <h3 class="text-lg font-bold text-white">Sinkronisasi Database Firebase & Keamanan</h3>
+                <p class="text-xs text-slate-400 mt-1">Data tersinkronisasi otomatis dengan Firebase Firestore (<code class="font-mono text-cyan-400">web-wedding-4d4ce</code>).</p>
+              </div>
+
+              <!-- Firebase Status Card -->
+              <div class="p-6 bg-[#0D1017] rounded-xl border border-white/10 space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-mono uppercase text-cyan-400">Status Database Firebase</span>
+                  <span class="px-2.5 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Terhubung</span>
+                </div>
+                <p class="text-xs text-slate-300">
+                  Project ID: <span class="text-white font-mono">web-wedding-4d4ce</span> · Dokumen: <span class="text-white font-mono">dexxdigital_cms/main_content</span>
+                </p>
+                <div class="pt-2">
+                  <button type="button" id="btn-manual-sync" class="px-4 py-2 text-xs font-semibold text-black bg-cyan-400 hover:bg-cyan-300 rounded-lg transition-colors cursor-pointer">
+                    Sinkronkan Sekarang ke Firebase
+                  </button>
+                </div>
+              </div>
+
+              <!-- Ganti PIN -->
+              <div class="p-6 bg-[#0D1017] rounded-xl border border-white/10 space-y-4">
+                <span class="text-xs font-mono uppercase text-cyan-400">Ubah PIN Admin Rahasia</span>
+                <div class="flex gap-3">
+                  <input type="text" id="admin-new-pin" maxlength="10" class="px-4 py-2 bg-[#08090C] border border-white/10 rounded-lg text-sm text-white font-mono w-40 text-center tracking-widest" />
+                  <button type="button" id="btn-save-pin" class="px-5 py-2 text-xs font-semibold text-black bg-cyan-400 hover:bg-cyan-300 rounded-lg transition-colors cursor-pointer">
+                    Simpan PIN Baru
+                  </button>
+                </div>
+              </div>
+
+              <!-- Ekspor Data -->
+              <div class="p-6 bg-[#0D1017] rounded-xl border border-white/10 space-y-4">
+                <span class="text-xs font-mono uppercase text-cyan-400">Ekspor Cadangan (Backup JSON)</span>
+                <p class="text-xs text-slate-300">Unduh seluruh portofolio dan teks website ke file JSON lokal.</p>
+                <button type="button" id="btn-export-backup" class="px-4 py-2 text-xs font-semibold text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-colors cursor-pointer">
+                  Unduh Backup JSON
+                </button>
+              </div>
+
+              <!-- Reset Setelan Pabrik -->
+              <div class="p-6 bg-rose-500/5 rounded-xl border border-rose-500/20 space-y-3">
+                <span class="text-xs font-mono uppercase text-rose-400">Zona Bahaya</span>
+                <p class="text-xs text-slate-300">Kembalikan semua proyek, teks, dan logo ke data bawaan awal.</p>
+                <button type="button" id="btn-factory-reset" class="px-4 py-2 text-xs font-semibold text-rose-300 bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 rounded-lg transition-colors cursor-pointer">
+                  Reset ke Setelan Pabrik
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Application Script (Pure Vanilla JS ES Module) -->
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
