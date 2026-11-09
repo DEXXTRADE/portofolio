@@ -50,7 +50,7 @@ const INITIAL_DATA = {
       subheadline: "DexxDigital menjembatani rekayasa perangkat lunak mutakhir, estetika obsidian modern, dan akselerasi brand. Kami mengubah visi ambisius menjadi produk digital kelas dunia.",
       ctaPrimary: "Jelajahi Portofolio",
       ctaSecondary: "Konsultasi Proyek",
-      heroImage: "/src/assets/images/hero_digital_agency_1794229794726.jpg",
+      heroImage: "./src/assets/images/hero_digital_agency_1794229794726.jpg",
       badgeText: "Siap Kolaborasi Q1 2026"
     },
     about: {
@@ -63,6 +63,14 @@ const INITIAL_DATA = {
       kicker: "Kapabilitas Digital · End-to-End Solutions",
       headline: "Solusi Komprehensif Siap Skala Besar.",
       subheadline: "Kami bertindak sebagai perpanjangan dari tim produk Anda—mengubah tantangan teknis kompleks menjadi pengalaman digital berkonversi tinggi."
+    },
+    contactSection: {
+      show: true,
+      kicker: "Mulai Kolaborasi · Intake Proyek Aktif",
+      headline: "Mari Bangun Sesuatu yang Luar Biasa.",
+      subheadline: "Punya ide proyek, membutuhkan desain ulang skala penuh, atau mencari partner teknis jangka panjang? Sampaikan kebutuhan Anda dan kami akan merespons dalam waktu 24 jam.",
+      showForm: true,
+      developerWhatsApp: "6281289003344"
     },
     contactChannels: {
       show: true,
@@ -170,7 +178,7 @@ const INITIAL_DATA = {
       client: "Nexus Global Capital",
       year: "2026",
       metric: "+310% Volume Transaksi",
-      image: "/src/assets/images/project_fintech_platform_1794229795467.jpg",
+      image: "./src/assets/images/project_fintech_platform_1794229795467.jpg",
       summary: "Platform manajemen aset algoritmik berkecepatan tinggi yang menyajikan telemetri pasar real-time dan otomasi portofolio institusional.",
       challenge: "Klien membutuhkan streaming ribuan event data pasar per detik tanpa jeda tampilan, dengan enkripsi setara perbankan.",
       solution: "Membangun sistem visualisasi data terakselerasi GPU dan pipeline WebSocket bidirectional dengan tema gelap obsidian untuk kenyamanan analisis jangka panjang.",
@@ -185,7 +193,7 @@ const INITIAL_DATA = {
       client: "Aether Cognitive Labs",
       year: "2026",
       metric: "4.8M Node Diproses Harian",
-      image: "/src/assets/images/project_ai_workflow_1794229796570.jpg",
+      image: "./src/assets/images/project_ai_workflow_1794229796570.jpg",
       summary: "Kanvas interaktif berbasis node untuk mengorkestrasi pipeline model AI multi-agen secara visual dan memantau status secara langsung.",
       challenge: "Peneliti memerlukan kanvas tak terbatas untuk merangkai workflow model AI yang rumit secara intuitif.",
       solution: "Merancang visualizer grafik vektor responsif dengan fitur docking node instan dan eksekusi pipeline paralel.",
@@ -200,7 +208,7 @@ const INITIAL_DATA = {
       client: "Nova Architectural Collective",
       year: "2025",
       metric: "Pemenang Penghargaan Desain",
-      image: "/src/assets/images/project_luxury_brand_1794229795686.jpg",
+      image: "./src/assets/images/project_luxury_brand_1794229795686.jpg",
       summary: "Showcase web editorial arsitektur yang mengusung kesederhanaan Skandinavia, tipografi berkelas, dan transisi halaman halus.",
       challenge: "Menampilkan kemegahan karya arsitektur fisik melalui layar digital dengan kecepatan muat halaman yang tetap prima.",
       solution: "Memadukan tipografi arsitektural yang kuat dengan pemuatan gambar progresif dan kontras monokrom elegan.",
@@ -910,8 +918,72 @@ function renderAbout() {
   }
 }
 
-// Kontak & Kanal Komunikasi Langsung: Opsional, Bebas Diedit & Dihapus
+// Kontak & Bagian Kolaborasi ("Mari Bangun Sesuatu yang Luar Biasa"): Opsional, Bebas Diedit & Dihapus
 function renderContact() {
+  const contactSectionEl = document.getElementById("contact");
+  const contactSec = appState.agency?.contactSection || { show: true };
+  const navContactLink = document.getElementById("nav-contact-link");
+  const mobileContactLink = document.getElementById("mobile-contact-link");
+  const footerContactLink = document.getElementById("footer-contact-link");
+
+  // Jika seluruh section kontak dinonaktifkan:
+  if (contactSec.show === false) {
+    if (contactSectionEl) contactSectionEl.style.display = "none";
+    if (navContactLink) navContactLink.style.display = "none";
+    if (mobileContactLink) mobileContactLink.style.display = "none";
+    if (footerContactLink) footerContactLink.style.display = "none";
+    return;
+  }
+
+  // Tampilkan section kontak
+  if (contactSectionEl) contactSectionEl.style.display = "block";
+  if (navContactLink) navContactLink.style.display = "inline-block";
+  if (mobileContactLink) mobileContactLink.style.display = "block";
+  if (footerContactLink) footerContactLink.style.display = "inline-block";
+
+  // Header Kontak ("Mari Bangun Sesuatu yang Luar Biasa")
+  const headerContainer = document.getElementById("contact-header-container");
+  const kickerContainer = document.getElementById("contact-kicker-container");
+  const kickerEl = document.getElementById("contact-kicker");
+  const headlineEl = document.getElementById("contact-headline");
+  const subheadlineEl = document.getElementById("contact-subheadline");
+
+  const kicker = contactSec.kicker !== undefined ? contactSec.kicker : "Mulai Kolaborasi · Intake Proyek Aktif";
+  const headline = contactSec.headline !== undefined ? contactSec.headline : "Mari Bangun Sesuatu yang Luar Biasa.";
+  const subheadline = contactSec.subheadline !== undefined ? contactSec.subheadline : "Punya ide proyek, membutuhkan desain ulang skala penuh, atau mencari partner teknis jangka panjang? Sampaikan kebutuhan Anda dan kami akan merespons dalam waktu 24 jam.";
+
+  if (kickerContainer && kickerEl) {
+    if (kicker && kicker.trim()) {
+      kickerContainer.style.display = "flex";
+      kickerEl.textContent = kicker;
+    } else {
+      kickerContainer.style.display = "none";
+    }
+  }
+
+  if (headlineEl) {
+    if (headline && headline.trim()) {
+      headlineEl.style.display = "block";
+      headlineEl.textContent = headline;
+    } else {
+      headlineEl.style.display = "none";
+    }
+  }
+
+  if (subheadlineEl) {
+    if (subheadline && subheadline.trim()) {
+      subheadlineEl.style.display = "block";
+      subheadlineEl.textContent = subheadline;
+    } else {
+      subheadlineEl.style.display = "none";
+    }
+  }
+
+  if (headerContainer) {
+    const hasAnyHeader = (kicker && kicker.trim()) || (headline && headline.trim()) || (subheadline && subheadline.trim());
+    headerContainer.style.display = hasAnyHeader ? "block" : "none";
+  }
+
   const channelsContainer = document.getElementById("contact-channels-container");
   const titleEl = document.getElementById("contact-channels-title");
   const emailItem = document.getElementById("contact-email-item");
@@ -937,22 +1009,36 @@ function renderContact() {
   const title = channels.title || "Kanal Komunikasi Langsung";
   const showCard = channels.show !== false;
   const showWaBtn = channels.showWhatsAppButton !== false;
+  const showForm = contactSec.showForm !== false;
 
-  const hasAnyItem = (email && email.trim()) || (phone && phone.trim()) || (address && address.trim()) || (hours && hours.trim());
+  const hasAnyChannel = (email && email.trim()) || (phone && phone.trim()) || (address && address.trim()) || (hours && hours.trim());
 
-  if (!showCard || !hasAnyItem) {
-    // Sembunyikan seluruh kartu kanal komunikasi kiri jika dinonaktifkan atau kosong
-    if (channelsContainer) channelsContainer.style.display = "none";
-    if (formColumn) {
-      formColumn.className = "col-span-12 max-w-2xl mx-auto w-full";
+  // Pengaturan Tampilan Kolom Form
+  if (formColumn) {
+    if (showForm) {
+      formColumn.style.display = "block";
+      if (!showCard || !hasAnyChannel) {
+        formColumn.className = "col-span-12 max-w-2xl mx-auto w-full";
+      } else {
+        formColumn.className = "lg:col-span-7 w-full";
+      }
+    } else {
+      formColumn.style.display = "none";
     }
-    return;
   }
 
-  // Tampilkan kartu dan posisikan berdampingan dengan form
-  if (channelsContainer) channelsContainer.style.display = "block";
-  if (formColumn) {
-    formColumn.className = "lg:col-span-7";
+  // Pengaturan Tampilan Kartu Kanal Komunikasi
+  if (!showCard || !hasAnyChannel) {
+    if (channelsContainer) channelsContainer.style.display = "none";
+  } else {
+    if (channelsContainer) {
+      channelsContainer.style.display = "block";
+      if (!showForm) {
+        channelsContainer.className = "col-span-12 max-w-xl mx-auto w-full space-y-8";
+      } else {
+        channelsContainer.className = "lg:col-span-5 space-y-8 w-full";
+      }
+    }
   }
 
   if (titleEl) titleEl.textContent = title;
@@ -1257,6 +1343,26 @@ function populateAdminForms() {
 
   const contactWaBtnToggle = document.getElementById("admin-contact-wa-btn-toggle");
   if (contactWaBtnToggle) contactWaBtnToggle.checked = channels.showWhatsAppButton !== false;
+
+  // Contact Section & Developer WhatsApp Fields
+  const contactSec = agency.contactSection || {};
+  const contactSecShow = document.getElementById("admin-contact-section-show");
+  if (contactSecShow) contactSecShow.checked = contactSec.show !== false;
+
+  const contactSecKicker = document.getElementById("admin-contact-section-kicker");
+  if (contactSecKicker) contactSecKicker.value = contactSec.kicker || "";
+
+  const contactDevWa = document.getElementById("admin-contact-dev-wa");
+  if (contactDevWa) contactDevWa.value = contactSec.developerWhatsApp || channels.whatsapp || "6281289003344";
+
+  const contactSecHeadline = document.getElementById("admin-contact-section-headline");
+  if (contactSecHeadline) contactSecHeadline.value = contactSec.headline || "Mari Bangun Sesuatu yang Luar Biasa.";
+
+  const contactSecSubheadline = document.getElementById("admin-contact-section-subheadline");
+  if (contactSecSubheadline) contactSecSubheadline.value = contactSec.subheadline || "";
+
+  const contactShowForm = document.getElementById("admin-contact-show-form");
+  if (contactShowForm) contactShowForm.checked = contactSec.showForm !== false;
 
   // Services Section Header Settings
   const srvShowToggle = document.getElementById("admin-services-show");
@@ -1650,6 +1756,23 @@ document.addEventListener("DOMContentLoaded", async () => {
       showWhatsAppButton: contactWaBtnToggle
     };
 
+    // Bagian Kolaborasi ("Mari Bangun Sesuatu yang Luar Biasa") & WhatsApp Developer
+    const contactSecShow = document.getElementById("admin-contact-section-show")?.checked ?? true;
+    const contactSecKicker = document.getElementById("admin-contact-section-kicker")?.value.trim() || "";
+    const contactDevWa = document.getElementById("admin-contact-dev-wa")?.value.trim() || "6281289003344";
+    const contactSecHeadline = document.getElementById("admin-contact-section-headline")?.value.trim() || "Mari Bangun Sesuatu yang Luar Biasa.";
+    const contactSecSubheadline = document.getElementById("admin-contact-section-subheadline")?.value.trim() || "";
+    const contactShowForm = document.getElementById("admin-contact-show-form")?.checked ?? true;
+
+    appState.agency.contactSection = {
+      show: contactSecShow,
+      kicker: contactSecKicker,
+      headline: contactSecHeadline,
+      subheadline: contactSecSubheadline,
+      showForm: contactShowForm,
+      developerWhatsApp: contactDevWa
+    };
+
     // Sinkronkan ke contact legacy juga
     appState.agency.contact.email = contactEmail;
     appState.agency.contact.phone = contactPhone;
@@ -1906,26 +2029,86 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-  // Contact Form Submission (Interactive Feedback)
+  // Contact Form Submission (Otomatis ke WhatsApp Developer)
   const contactForm = document.getElementById("public-contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
       const name = document.getElementById("inquiry-name")?.value.trim();
       const email = document.getElementById("inquiry-email")?.value.trim();
+      const service = document.getElementById("inquiry-service")?.value || "Pengembangan Web & SaaS Full-Stack";
+      const budget = document.getElementById("inquiry-budget")?.value || "Rp 25 Juta – Rp 50 Juta";
       const message = document.getElementById("inquiry-message")?.value.trim();
 
       if (!name || !email || !message) {
-        alert("Harap lengkapi nama, email, dan pesan Anda.");
+        alert("Harap lengkapi nama, email, dan deskripsi kebutuhan proyek Anda.");
         return;
       }
 
-      document.getElementById("contact-form-container").classList.add("hidden");
+      // Ambil nomor WhatsApp Developer tujuan
+      let devPhone = appState.agency?.contactSection?.developerWhatsApp || appState.agency?.contactChannels?.whatsapp || "6281289003344";
+      let cleanPhone = devPhone.replace(/\D/g, "");
+      if (cleanPhone.startsWith("0")) {
+        cleanPhone = "62" + cleanPhone.slice(1);
+      }
+      if (!cleanPhone) cleanPhone = "6281289003344";
+
+      // Susun pesan WhatsApp korporat yang rapi
+      const waText = 
+`*KONSULTASI PROYEK BARU - DEXXDIGITAL*
+
+Halo Developer DexxDigital, ada formulir konsultasi masuk dari website:
+
+* Nama / Perusahaan: ${name}
+* Email Bisnis: ${email}
+* Layanan yang Dipilih: ${service}
+* Estimasi Anggaran: ${budget}
+
+* Deskripsi Kebutuhan Proyek:
+"${message}"
+
+------------------------------------
+Waktu: ${new Date().toLocaleString("id-ID")}
+Dikirim otomatis melalui website portofolio DexxDigital.`;
+
+      const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(waText)}`;
+
+      // Buka otomatis WhatsApp di tab baru
+      try {
+        window.open(waUrl, "_blank");
+      } catch (err) {
+        console.warn("Popup blocked, fallback button available:", err);
+      }
+
+      // Sembunyikan form dan tampilkan kartu konfirmasi interaktif
+      document.getElementById("contact-form-container")?.classList.add("hidden");
       const successBox = document.getElementById("contact-success-container");
       if (successBox) {
         successBox.classList.remove("hidden");
-        document.getElementById("success-client-name").textContent = name;
-        document.getElementById("success-client-email").textContent = email;
+        const clientNameEl = document.getElementById("success-client-name");
+        if (clientNameEl) clientNameEl.textContent = name;
+        const openChatBtn = document.getElementById("btn-wa-open-chat");
+        if (openChatBtn) {
+          openChatBtn.href = waUrl;
+        }
+      }
+
+      // Simpan backup inquiry ke Firebase Firestore (jika terhubung)
+      if (db && firebaseConnected) {
+        try {
+          const inquiryRef = doc(db, "dexxdigital_inquiries", "inq_" + Date.now());
+          setDoc(inquiryRef, {
+            name,
+            email,
+            service,
+            budget,
+            message,
+            developerTarget: cleanPhone,
+            createdAt: new Date().toISOString()
+          }).catch(err => console.warn("Inquiry sync warning:", err));
+        } catch (err) {
+          console.warn("Inquiry firestore error:", err);
+        }
       }
     });
   }
